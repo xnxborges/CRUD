@@ -1,4 +1,4 @@
-package br.com.CRUD.services;
+package com.br.CRUD.services;
 
 import java.util.concurrent.atomic.AtomicLong;
 

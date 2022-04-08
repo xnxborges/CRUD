@@ -8,8 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.br.CRUD.model.Person;
-
-import br.com.CRUD.services.PersonService;
+import com.br.CRUD.services.PersonService;
 
 @RestController
 @RequestMapping("/person")
