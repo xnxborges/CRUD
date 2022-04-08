@@ -15,19 +15,19 @@ public class PersonService {
 
 	private final AtomicLong counter = new AtomicLong();
 
-	//GET
+	// GET
 	public Person create(Person person) {
 		return person;
 
 	}
 
-	//PUT
+	// PUT
 	public Person update(Person person) {
 		return person;
 
 	}
-	
-	//DELETE
+
+	// DELETE
 	public void delete(String id) {
 
 	}
@@ -45,7 +45,7 @@ public class PersonService {
 
 	public List<Person> findAll() {
 		List<Person> persons = new ArrayList<Person>();
-		for (int i = 0; i < 8; i++) {
+		for (int i = 0; i < 2; i++) {
 			Person person = mockPerson(i);
 			persons.add(person);
 		}
