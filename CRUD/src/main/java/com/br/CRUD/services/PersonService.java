@@ -15,7 +15,24 @@ public class PersonService {
 
 	private final AtomicLong counter = new AtomicLong();
 
-	// Mock estático
+	//GET
+	public Person create(Person person) {
+		return person;
+
+	}
+
+	//PUT
+	public Person update(Person person) {
+		return person;
+
+	}
+	
+	//DELETE
+	public void delete(String id) {
+
+	}
+
+	// Mock estático do tipo GET
 	public Person findbyId(String id) {
 		Person person = new Person();
 		person.setId(counter.incrementAndGet());
