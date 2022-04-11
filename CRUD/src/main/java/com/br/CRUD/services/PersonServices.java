@@ -2,11 +2,12 @@ package com.br.CRUD.services;
 
 import java.util.List;
 
-import org.hibernate.ResourceClosedException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.rest.webmvc.ResourceNotFoundException;
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
+import com.br.CRUD.exception.ResourceNotFoundExeception;
 import com.br.CRUD.model.Person;
 import com.br.CRUD.repository.PersonRepository;
 
@@ -27,12 +28,13 @@ public class PersonServices {
 	}
 
 	public Person findbyId(Long id) {
-		return repository.findById(id).orElseThrow(() -> new ResourceClosedException("No records found for this ID"));
+		return repository.findById(id)
+				.orElseThrow(() -> new ResourceNotFoundExeception("No records found for this ID"));
 	}
 
 	public Person update(Person person) {
 		Person entity = repository.findById(person.getId())
-				.orElseThrow(() -> new ResourceClosedException("No records found for this ID"));
+				.orElseThrow(() -> new ResourceNotFoundException("No records found for this ID"));
 		entity.setFistName(person.getFistName());
 		entity.setLastName(person.getLastName());
 		entity.setAdress(person.getAdress());
@@ -42,7 +44,7 @@ public class PersonServices {
 
 	public void delete(Long id) {
 		Person entity = repository.findById(id)
-				.orElseThrow(() -> new ResourceClosedException("No records found for this ID"));
+				.orElseThrow(() -> new ResourceNotFoundException("No records found for this ID"));
 		repository.delete(entity);
 	}
 
