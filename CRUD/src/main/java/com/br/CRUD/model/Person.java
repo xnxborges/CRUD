@@ -3,14 +3,33 @@ package com.br.CRUD.model;
 import java.io.Serializable;
 import java.util.Objects;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "person")
 public class Person implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	
+	@Column(name = "fisrt_name", nullable = false, length = 50)
 	private String fistName;
+	
+	@Column(name = "last_name", nullable = false, length = 50)
 	private String lastName;
+	
+	@Column(name = "adress", length = 100)
 	private String adress;
+	
+	@Column(name = "gender", nullable = false, length = 1)
 	private String gender;
 
 	public Person() {
