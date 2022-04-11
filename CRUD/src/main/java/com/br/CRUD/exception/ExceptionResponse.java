@@ -1,4 +1,4 @@
-package br.com.API.calculadora.exception;
+package com.br.CRUD.exception;
 
 import java.io.Serializable;
 import java.util.Date;

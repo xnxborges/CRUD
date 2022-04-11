@@ -11,14 +11,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.br.CRUD.model.Person;
-import com.br.CRUD.services.PersonService;
+import com.br.CRUD.services.PersonServices;
 
 @RestController
 @RequestMapping("/person")
 public class PersonController {
 
 	@Autowired
-	private PersonService services;
+	private PersonServices services;
 
 	//Get findAll
 	@RequestMapping(method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
@@ -28,7 +28,7 @@ public class PersonController {
 	
 	//Get findById
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-	public Person findById(@PathVariable("id") String id) {
+	public Person findById(@PathVariable("id") Long id) {
 		return services.findbyId(id);
 	}
 	
@@ -48,7 +48,7 @@ public class PersonController {
 	
 	//DELETE
 	@RequestMapping(value ="/{id}", method = RequestMethod.DELETE)
-	public void delete(@PathVariable("id") String id) {
+	public void delete(@PathVariable("id") Long id) {
 		services.delete(id);
 	}
 }
