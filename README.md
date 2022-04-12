@@ -14,7 +14,7 @@ Na psta criada, abra o CMD e digite o comando: git clone https://github.com/xnxb
 Abra o projeto na sua IDE de preferencia e importe os repositórios Maven. Depois de importados clique com o botão direito sobre a pasta do projeto e selecione o comando "RUN".  
 Aguarde até que o SpringBoot suba a aplicação.  
 
-##Fazendo conexão com o banco de dados MySQL  
+## Fazendo conexão com o banco de dados MySQL  
 No diretório src/main/resources -> application.properties, estão todos os comando para que a aplicação faça conexão com obanco de dados, caso precise aletre as informações conforme as características do seu banco.  
 Abra o MySQL e cria uma database com as informações contidas no arquivo application.properties e a conexão estará pronta. 
 Ao subir a aplicação automaticamente o SpringBoot criará a tabela e adicionará informações nela.  
