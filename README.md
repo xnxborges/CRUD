@@ -21,12 +21,12 @@ Ao subir a aplicação automaticamente o SpringBoot criará a tabela e adicionar
 
 ## Visualizando os dados contidos na tabela
 No browser cole o endpoint editado para visualazação de todos os dados do tipo GET.   
-GET  
+GET    
 http://localhost:8080/person/  
 
 ## Fazendo requisições com o Postman  
 
-POST  
+POST    
 http://localhost:8080/person/  
 
 Abra o Postaman, cole o endpoint acima e verá a mesma informaçõa da tabela mostada no browser. 
@@ -40,14 +40,14 @@ Cole  o objeto:
     }´  
 Iclua os dados do objeto conforme deseje fazer a requisição do tipo POST no banco e clique em "Send".  
 
- PUT
+ PUT  
 http://localhost:8080/person/
 
 Para alterar um objeto já existente utilize a requisição PUT  
 Siga os passoa: Requisição GET para vizualizar os dados existentes, escolha um, copie, edite, selecione a requisição do tipo POST e clique em SEND. 
 
 
-DELETE
+DELETE  
 http://localhost:8080/person/{id}
 
 Para deletar um objeto utilize o endpoint acima e altere o "{id}" pelo número do id que deseja deletar e clique em SEND.  
