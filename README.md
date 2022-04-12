@@ -4,9 +4,9 @@
 Projeto com conceitos práticos de como criar um CRUD (Creat, Read, Updatte and Delete), utilizando endpoints e gravando os dados dos usuários no bance de dados
 
 ## Tecnologias usasdas:  
-Java 11
-Springboot 
-MySQL 
+Java 11  
+Springboot   
+MySQL   
 
 ## Executando a aplicação  
 Crie uma pasta em seu computador e faça o clone do projeto.  
